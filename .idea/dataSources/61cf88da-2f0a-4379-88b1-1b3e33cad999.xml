@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="nathaniel95975_inventory_management@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="nathaniel95975_inventory_management">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="angulartest"/>
+    <schema id="4" parent="1" name="crud_alinko"/>
+    <schema id="5" parent="1" name="homestead"/>
+    <schema id="6" parent="1" name="information_schema"/>
+    <schema id="7" parent="1" name="java_shopping_cart"/>
+    <schema id="8" parent="1" name="myblog"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="my_guitar_shop1"/>
+    <schema id="11" parent="1" name="my_guitar_shop2"/>
+    <schema id="12" parent="1" name="nathaniel95975_helpdesk"/>
+    <schema id="13" parent="1" name="nathaniel_test"/>
+    <schema id="14" parent="1" name="performance_schema"/>
+    <schema id="15" parent="1" name="phpmyadmin"/>
+    <schema id="16" parent="1" name="test"/>
+    <schema id="17" parent="1" name="website_designs"/>
+    <table id="18" parent="2" name="brand"/>
+    <table id="19" parent="2" name="category"/>
+    <table id="20" parent="2" name="inventory_order"/>
+    <table id="21" parent="2" name="inventory_order_product"/>
+    <table id="22" parent="2" name="product"/>
+    <table id="23" parent="2" name="user_details"/>
+    <column id="24" parent="18" name="brand_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="25" parent="18" name="category_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="18" name="brand_name">
+      <Position>3</Position>
+      <DataType>varchar(250)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="18" name="brand_status">
+      <Position>4</Position>
+      <DataType>enum(&apos;active&apos;, &apos;inactive&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="28" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>brand_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="19" name="category_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="19" name="category_name">
+      <Position>2</Position>
+      <DataType>varchar(250)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="19" name="category_status">
+      <Position>3</Position>
+      <DataType>enum(&apos;active&apos;, &apos;inactive&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="32" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>category_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="33" parent="20" name="inventory_order_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="34" parent="20" name="user_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="20" name="inventory_order_total">
+      <Position>3</Position>
+      <DataType>double(10,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="20" name="inventory_order_date">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="20" name="inventory_order_name">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="20" name="inventory_order_address">
+      <Position>6</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="20" name="payment_status">
+      <Position>7</Position>
+      <DataType>enum(&apos;cash&apos;, &apos;credit&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="20" name="inventory_order_status">
+      <Position>8</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="20" name="inventory_order_created_date">
+      <Position>9</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="42" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>inventory_order_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="43" parent="21" name="inventory_order_product_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="44" parent="21" name="inventory_order_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="21" name="product_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="21" name="quantity">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="21" name="price">
+      <Position>5</Position>
+      <DataType>double(10,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="21" name="tax">
+      <Position>6</Position>
+      <DataType>double(10,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="49" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>inventory_order_product_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="50" parent="22" name="product_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="51" parent="22" name="category_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="22" name="brand_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="22" name="product_name">
+      <Position>4</Position>
+      <DataType>varchar(300)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="22" name="product_description">
+      <Position>5</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="22" name="product_quantity">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="22" name="product_unit">
+      <Position>7</Position>
+      <DataType>varchar(150)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="22" name="product_base_price">
+      <Position>8</Position>
+      <DataType>double(10,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="22" name="product_tax">
+      <Position>9</Position>
+      <DataType>decimal(4,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="22" name="product_minimum_order">
+      <Position>10</Position>
+      <DataType>double(10,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="22" name="product_enter_by">
+      <Position>11</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="22" name="product_status">
+      <Position>12</Position>
+      <DataType>enum(&apos;active&apos;, &apos;inactive&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="22" name="product_date">
+      <Position>13</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="63" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>product_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="64" parent="23" name="user_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="65" parent="23" name="user_email">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="23" name="user_password">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="23" name="user_name">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="68" parent="23" name="user_type">
+      <Position>5</Position>
+      <DataType>enum(&apos;master&apos;, &apos;user&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="23" name="user_status">
+      <Position>6</Position>
+      <DataType>enum(&apos;Active&apos;, &apos;Inactive&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="70" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
